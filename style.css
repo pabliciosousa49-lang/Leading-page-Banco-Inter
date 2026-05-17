@@ -193,55 +193,99 @@ nav a:hover::after {
   display: block;
 }
 
-/* FEATURES */
+/* Beneficios */
 .features {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 80px 40px;
-  gap: 60px;
+  gap: 80px;
+
+  padding: 100px 60px;
+
+  background: #251d17c7;
+
+  overflow: hidden;
 }
 
-/* coluna dos cards */
+/* LADO ESQUERDO */
 .features-left {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-/* cards */
+/* CARDS */
 .card {
   background: white;
-  padding: 25px;
-  width: 320px;
 
-  border-radius: 12px;
+  padding: 30px;
+
+  width: 340px;
+
+  border-radius: 18px;
+
   text-align: center;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+
   transition: 0.4s;
 }
 
-.card img {
-  width: 60px;
-  margin-bottom: 10px;
-}
-
 .card:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translateY(-10px) scale(1.02);
 }
 
-/* vídeo */
+.card img {
+  width: 65px;
+
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 24px;
+
+  margin-bottom: 10px;
+
+  color: #111;
+}
+
+.card p {
+  font-size: 16px;
+
+  color: #555;
+
+  line-height: 1.5;
+}
+
+/* LADO DIREITO */
+.features-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 30px;
+}
+
+/* IMAGEM BENEFÍCIOS */
+.features-video img {
+  width: 100%;
+  max-width: 340px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+/* VÍDEO */
 .features-video video {
-  width: 320px; /* largura do vídeo */
-  height: 600px; /* altura do vídeo */
-
-  object-fit: cover; /* preenche o container mantendo proporção */
-
-  border-radius: 20px; /* cantos arredondados */
-
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* sombra do vídeo */
+  width: 340px;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
 }
 
 /* APP */
@@ -300,16 +344,83 @@ nav a:hover::after {
 
 /* TESTIMONIALS */
 .testimonials {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f5f7fa);
+
   text-align: center;
-  padding: 80px 20px;
 }
 
+.testimonials h2 {
+  font-size: 42px;
+  color: #111;
+
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+/* container dos cards */
+.testimonials-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* card */
 .testimonial-card {
-  margin: 20px auto;
-  max-width: 400px;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
+  position: relative;
+
+  width: 350px;
+  padding: 35px 30px;
+
+  background: white;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+
+  transition: 0.4s;
+
+  overflow: hidden;
+}
+
+/* efeito topo */
+.testimonial-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  background: linear-gradient(90deg, #ff6a00, #ff9f43);
+}
+
+/* hover */
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.testimonial-card p {
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: #444;
+
+  margin-bottom: 25px;
+
+  font-style: italic;
+}
+
+/* nome */
+.testimonial-card span {
+  font-size: 16px;
+  font-weight: 700;
+
+  color: #ff6a00;
 }
 
 /* CONTACT */
@@ -393,7 +504,31 @@ footer {
 
   .features {
     flex-direction: column;
+    padding: 80px 20px;
+    gap: 50px;
+  }
+
+  .features-left {
+    width: 100%;
     align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  /* RESPONSIVIDADE DA IMAGEM + VIDEO */
+  .features-video {
+    width: 100%;
+    align-items: center;
+  }
+
+
+  .features-video video {
+    width: 100%;
+    max-width: 280px;
+    height: 540px;
   }
 
   .app {
@@ -408,6 +543,15 @@ footer {
   .about img {
     width: 100%;
     height: auto;
+  }
+
+  .testimonials h2 {
+    font-size: 32px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    max-width: 340px;
   }
 
 }
