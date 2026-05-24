@@ -497,8 +497,8 @@ footer {
     height: 20px;
   }
 
-  .hero {
-    height: 50vh;
+  hero {
+    height: 30vh;
   }
 
   .hero-text h2 {
