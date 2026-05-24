@@ -145,7 +145,7 @@ nav a:hover::after {
 
 /* HERO */
 .hero {
-  height: 70vh;
+  height: 60vh;
   background: url("img/banner.png") no-repeat center center;
   background-size: cover;
   display: flex;
@@ -200,13 +200,8 @@ nav a:hover::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   gap: 80px;
-
   padding: 100px 60px;
-
-  background: #fa7f1b69;
-
   overflow: hidden;
 }
 
@@ -220,17 +215,11 @@ nav a:hover::after {
 /* CARDS */
 .card {
   background: white;
-
   padding: 30px;
-
   width: 340px;
-
   border-radius: 18px;
-
   text-align: center;
-
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-
   transition: 0.4s;
 }
 
@@ -240,15 +229,12 @@ nav a:hover::after {
 
 .card img {
   width: 65px;
-
   margin-bottom: 15px;
 }
 
 .card h3 {
   font-size: 24px;
-
   margin-bottom: 10px;
-
   color: #111;
 }
 
@@ -500,7 +486,7 @@ footer {
   }
 
   .hero {
-    height: 60vh;
+    height: 50vh;
   }
 
   .hero-text h2 {
