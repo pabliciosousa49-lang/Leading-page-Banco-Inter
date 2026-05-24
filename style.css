@@ -11,15 +11,17 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
 header {
   display: flex;
   align-items: center;
   padding: 10px 40px;
 
-  position: relative;
+  /* Modificações aqui para fixar: */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  /* Garante que o header fique por cima dos cards e vídeos */
   color: white;
-
   background: url("img/cartao.png") no-repeat center center;
   background-size: cover;
 }
@@ -29,8 +31,10 @@ header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(65, 40, 12, 0.979);
+  background: rgba(65, 40, 12, 0.815);
   z-index: 1;
+  /* --- ADICIONADO PARA SUAVIZAR A TROCA DE COR --- */
+  transition: background 0.4s ease;
 }
 
 header * {
@@ -145,7 +149,7 @@ nav a:hover::after {
 
 /* HERO */
 .hero {
-  height: 60vh;
+  height: 85vh;
   background: url("img/banner.png") no-repeat center center;
   background-size: cover;
   display: flex;
@@ -556,5 +560,4 @@ footer {
     width: 100%;
     max-width: 340px;
   }
-
 }
